@@ -1,0 +1,5 @@
+com\product\entity\Product.class
+com\product\controller\ProductController.class
+com\product\ProductcreateupdatedeleteApplication.class
+com\product\entity\Product$ProductBuilder.class
+com\product\repository\ProductRepository.class
