@@ -1,0 +1,8 @@
+com\atm\entity\ATM.class
+com\atm\repository\atmRepository.class
+com\atm\controller\atmController.class
+com\atm\DigitalAtmApplication.class
+com\atm\service\atmService.class
+com\atm\dto\atmDto.class
+com\atm\serviceimpl\atmServiceImpl.class
+com\atm\entity\CardDetails.class
