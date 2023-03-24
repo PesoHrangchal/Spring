@@ -1,0 +1,25 @@
+	@Autowired private ATMRepository aTMRepository;
+	@Override
+	public void run(String... args) throws Exception {
+		
+		UserAccountDTO userAccountDTO = new UserAccountDTO(
+	            "Jni","i@gmail.com","459841131","current","12011341254",7000.0,1292,new Date(12-11-2027));
+
+		// Create an instance of UserAccount and set its properties
+		UserAccount userAccount = UserAccount.builder()
+		        .name(userAccountDTO.getName())
+		        .email(userAccountDTO.getEmail())
+		        .contact_number(userAccountDTO.getContact_number())
+		        .accountType(userAccountDTO.getAccountType())
+		        .accountNumber(userAccountDTO.getAccountNumber())
+		        .CVV(userAccountDTO.randomCvv())
+		        .amount(userAccountDTO.getAmount())
+		        .pin(userAccountDTO.getPin())
+		        .date(userAccountDTO.getExpiryDate())
+		        .cardNumber(userAccountDTO.randomCardNo())
+		        .build();
+		// Save the UserAccount object to the database
+		UserAccount savedUserAccount = aTMRepository.save(userAccount);
+		// Print the account number of the saved user account
+		System.out.println("Saved User of  Account Number: " + savedUserAccount.getAccountNumber());
+	}
